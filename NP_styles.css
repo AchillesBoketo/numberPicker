@@ -1,0 +1,121 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.numberPicker {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: bisque;   
+    overflow: scroll;
+}
+
+.selected-wrap {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.selected-wrap * {
+    margin: 0px;
+}
+
+.ball {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: blueviolet;
+}
+
+.selectedLine {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.picker-wrap {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.picker-section {
+    width: 100%;
+}
+.section-title {
+    font-weight: bold;
+}
+
+.ball-wrap {
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ball-wrap .ball {
+    background-color: transparent;
+    border-color: blueviolet;
+    border-style: solid;
+    border-width: 1px;
+    
+}
+
+.ball-wrap .ball:hover, .ball-wrap .ball:focus {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        display: flex;
+    }
+    .numberPicker {
+        position: absolute;
+        bottom: 0px;
+        height: auto;
+        overflow: auto;
+    }
+    .selected-wrap {
+        position: static;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .numberPicker {
+        position: relative;
+        width: 760px;        
+        height: auto;
+        overflow: auto;        
+    }
+}
